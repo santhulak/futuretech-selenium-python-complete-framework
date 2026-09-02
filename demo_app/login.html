@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FutureTech Demo Login</title>
+<style>
+body{font-family:Arial;background:#f4f6f8;display:flex;justify-content:center;align-items:center;min-height:100vh}
+.card{width:360px;padding:30px;background:white;border-radius:12px;box-shadow:0 5px 25px rgba(0,0,0,.12)}
+input,button{width:100%;box-sizing:border-box;padding:12px;margin:8px 0}
+#error-message{color:#b00020;font-weight:bold;margin-top:12px}
+#success-message{color:#087f23;font-weight:bold;margin-top:12px}
+</style>
+</head>
+<body>
+<div class="card">
+<h2>FutureTech Demo Login</h2>
+<label for="username">Username</label>
+<input id="username" type="text">
+<label for="password">Password</label>
+<input id="password" type="password">
+<button id="login-button">Login</button>
+<a id="forgot-password" href="password-recovery.html">Forgot Password?</a>
+<div id="error-message"></div>
+<div id="success-message"></div>
+</div>
+<script>
+document.getElementById("login-button").addEventListener("click", function(){
+const u=document.getElementById("username").value;
+const p=document.getElementById("password").value;
+document.getElementById("error-message").textContent="";
+document.getElementById("success-message").textContent="";
+if(u==="testuser" && p==="Password@123"){
+document.getElementById("success-message").textContent="Login successful";
+}else{
+document.getElementById("error-message").textContent="Invalid username or password";
+}
+});
+</script>
+</body>
+</html>

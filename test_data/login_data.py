@@ -1,0 +1,6 @@
+VALID_USERNAME = "testuser"
+VALID_PASSWORD = "Password@123"
+INVALID_USERNAME = "wronguser"
+INVALID_PASSWORD = "Wrong@123"
+EXPECTED_SUCCESS = "Login successful"
+EXPECTED_ERROR = "Invalid username or password"
